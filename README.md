@@ -1,4 +1,4 @@
-# Documentation Viewer Module
+# TEST Documentation Viewer Module
 
 [![Build Status](https://secure.travis-ci.org/silverstripe/silverstripe-docsviewer.png?branch=master)](http://travis-ci.org/silverstripe/silverstripe-docsviewer)
 
