@@ -1,4 +1,4 @@
-# TEST2 Documentation Viewer Module
+# Silverstripe 4 Documentation Viewer Module
 
 [![Build Status](https://secure.travis-ci.org/silverstripe/silverstripe-docsviewer.png?branch=master)](http://travis-ci.org/silverstripe/silverstripe-docsviewer)
 
@@ -11,7 +11,7 @@
 
 These are pulled in via Composer.
 
-* SilverStripe 3.1
+* SilverStripe 4 (updated)
 * [Parsedown](http://parsedown.org/) and Parsedown Extra.
 
 ## Summary
