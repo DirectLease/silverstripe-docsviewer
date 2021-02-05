@@ -11,7 +11,7 @@
 
 These are pulled in via Composer.
 
-* SilverStripe 4
+* SilverStripe 4 (updated)
 * [Parsedown](http://parsedown.org/) and Parsedown Extra.
 
 ## Summary
