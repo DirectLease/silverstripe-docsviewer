@@ -1,4 +1,4 @@
-# Silverstripe 4 test Documentation Viewer Module
+# Silverstripe 4 Documentation Viewer Module
 
 [![Build Status](https://secure.travis-ci.org/silverstripe/silverstripe-docsviewer.png?branch=master)](http://travis-ci.org/silverstripe/silverstripe-docsviewer)
 
