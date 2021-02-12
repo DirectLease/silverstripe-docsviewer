@@ -176,7 +176,9 @@ class DocumentationPage extends ViewableData
     public function getMarkdown($removeMetaData = false)
     {
         try {
-            if (is_file($this->getPath()) && $md = file_get_contents($this->getPath())) {
+            $path = $this->getPath();
+
+            if (is_file($path) && $md = file_get_contents($path)) {
                 $this->populateMetaDataFromText($md, $removeMetaData);
 
                 return $md;
@@ -261,6 +263,19 @@ class DocumentationPage extends ViewableData
     public function getPath()
     {
         return $this->path;
+    }
+
+
+    /**
+     * Test whether this is an api generation page
+     * @return string
+     */
+    public function getIsAPI()
+    {
+        if( strpos ( $this->getPath(), 'docs/api')  !== false ){
+            return true;
+        }
+        return false;
     }
 
     /**

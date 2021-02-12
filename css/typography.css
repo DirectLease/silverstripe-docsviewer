@@ -89,9 +89,9 @@ li, dd, li p {
     line-height: 1.5;
 }
 
-li {
+/*li {
     list-style-position: inside;
-}
+}*/
 
 li ul,
 li ol {
@@ -154,7 +154,7 @@ h2 {
     font-size: 28px;
     line-height: 30px;
     margin: 40px 0 20px;
-    border-top: 1px solid #eee;
+    border-top: 1px solid #ccc;
     padding-top: 29px;
     letter-spacing: -1px;
     color: rgb(3, 91, 136);
@@ -174,15 +174,19 @@ h4 {
 }
 
 h5 {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 14px;
     margin-bottom: 7px;
+    background:#edf2f5; padding:1em;
 }
 
 h6 {
-    font-size: 12px;
+    font-size: 15px;
     line-height: 15px;
     margin-bottom: 10px;
+    border-top: 1px solid #e3e3e3;
+    margin-top:20px;
+    padding-top:20px;
 }
 
 h1 .heading-anchor-link,
@@ -237,7 +241,8 @@ code {
     padding: 2px;
 }
 
-    code a {
+    /*code a {*/
+    A code {
       color: #ed135a;
       text-decoration: underline;
     }
@@ -270,13 +275,15 @@ blockquote {
         color: #667D76;
     }
 
+.docs-api blockquote { background: #eef4f6; padding: 28px 20px 0 20px; }
+.docs-api blockquote p { font-style: normal; font-size: 14px;  color: #333333; }
+
 /*! tables */
 table {
     border-collapse: collapse;
     width: 100%;
     background-color: #fafafa;
     margin-bottom: 28px;
-    border: 1px solid #c3cdca;
 }
 
     table tr:nth-child(even) {
@@ -298,19 +305,25 @@ table {
             padding: 7px 10px 6px;
             font-size: 15px;
             text-align: left;
-            border-right: 1px solid #c3cdca;
+            border-bottom: 1px solid #e3e3e3;
         }
 
     table tbody tr {
-        border-top: 1px solid #c3cdca;
+        border-bottom: 1px solid #e3e3e3;
     }
 
     table td {
         font-size: 15px;
         line-height: 21px;
         padding: 7px;
-        border-right: 1px solid #c3cdca;
+        border-right: 1px solid #e3e3e3;
+        border-left: 1px solid #e3e3e3;
     }
+
+.docs-api table { /*border-bottom: 1px solid #c3cdca;*/ }
+.docs-api table thead th, .docs-api table td { border-left: 0; border-right: 0; }
+.docs-api table, .docs-api table tr:nth-child(even) { background: #fff; }
+.docs-api table tr:hover { background: #eef4f6; }
 
 /*! Edit Link */
 #edit-link {

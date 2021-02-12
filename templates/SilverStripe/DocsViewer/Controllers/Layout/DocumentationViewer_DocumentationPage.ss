@@ -1,11 +1,10 @@
-<div id="documentation-page" class="box">
+<div id="documentation-page" class="box<% if $IsAPIPage %> docs-api<% end_if %>">
 	<% if VersionWarning %>
 		<% include SilverStripe\\DocsViewer\\Controllers\\DocumentationVersion_warning Version=$Entity.Version %>
 	<% end_if %>
 
 	<% include SilverStripe\\DocsViewer\\Controllers\\DocumentationTableContents %>
 
-		
 	$Content.RAW
 
 	<% include SilverStripe\\DocsViewer\\Controllers\\DocumentationNextPrevious %>

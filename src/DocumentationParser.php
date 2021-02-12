@@ -45,6 +45,8 @@ class DocumentationParser
      */
     public static function parse(DocumentationPage $page, $baselink = null)
     {
+        //echo "<pre>";print_r($page);echo "</pre>";die();
+        //if (!$page || (!$page->getIsAPI() && !$page instanceof DocumentationPage)) {
         if (!$page || (!$page instanceof DocumentationPage)) {
             return false;
         }
@@ -56,15 +58,16 @@ class DocumentationParser
         $md = self::rewrite_relative_links($md, $page, $baselink);
 
         $md = self::rewrite_api_links($md, $page);
-        $md = self::rewrite_heading_anchors($md, $page);
-
+        if(!$page->getIsAPI()) { // don't rewrite the heading anchors for the api pages, as they are perfect the way they are
+            $md = self::rewrite_heading_anchors($md, $page);
+        }
         $md = self::rewrite_code_blocks($md);
 
         $parser = new ParsedownExtra();
         $parser->setBreaksEnabled(false);
 
         $text = $parser->text($md);
-
+        //echo "<pre>";print_r($text);echo "</pre>";die();
         return $text;
     }
 

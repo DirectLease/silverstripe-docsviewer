@@ -1,14 +1,17 @@
 <?php
 namespace SilverStripe\DocsViewer\Controllers;
 
+use InvalidArgumentException;
 use SilverStripe\Assets\Folder;
 use SilverStripe\Control\Controller;
 use SilverStripe\Control\Director;
 use SilverStripe\Control\HTTPResponse;
 use SilverStripe\Core\Config\Config;
+use SilverStripe\Core\Injector\Injector;
 use SilverStripe\Dev\DevelopmentAdmin;
 use SilverStripe\DocsViewer\DocumentationHelper;
 use SilverStripe\DocsViewer\DocumentationManifest;
+use SilverStripe\DocsViewer\DocumentationParser;
 use SilverStripe\DocsViewer\DocumentationPermalinks;
 use SilverStripe\DocsViewer\Extensions\DocumentationViewerVersionWarning;
 use SilverStripe\DocsViewer\Models\DocumentationFolder;
@@ -311,6 +314,7 @@ class DocumentationViewer extends Controller implements PermissionProvider
                 $this->init();
 
                 $type = $this->record->getType();
+
                 $body = $this->renderWith(
                     array(
                         DocumentationViewer::class . "_{$type}",
@@ -551,6 +555,14 @@ class DocumentationViewer extends Controller implements PermissionProvider
     public function getPage()
     {
         return $this->record;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getIsAPIPage()
+    {
+        return $this->getPage()->getIsAPI();
     }
 
     /**

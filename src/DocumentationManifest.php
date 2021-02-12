@@ -458,7 +458,8 @@ class DocumentationManifest
             'filepath'   => DocumentationHelper::normalizePath($path),
             'type'       => get_class($page),
             'entitypath' => $this->entity->getPath(),
-            'summary'    => $page->getSummary()
+            'summary'    => $page->getSummary(),
+            'isapi'      => $page->getIsAPI()
         );
     }
 
@@ -691,6 +692,10 @@ class DocumentationManifest
             $url = substr($url, 0, strpos($url, "index.md/"));
         }
 
+        if( strpos ( $url, 'docs/api')  !== false ){
+            $url = strtolower( str_replace('.md/','/',$url) );
+        }
+
         return $url;
     }
 
@@ -718,6 +723,10 @@ class DocumentationManifest
 
         foreach ($this->getPages() as $url => $page) {
             $pagePath = $this->normalizeUrl($page['filepath']);
+
+            /*if($page['isapi']){
+                $pagePath = strtolower( str_replace('.md/','/',$pagePath) );
+            }*/
 
             // check to see if this page is under the given path
             if (strpos($pagePath, $entityPath) === false) {

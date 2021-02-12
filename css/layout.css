@@ -820,3 +820,9 @@ li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8 {
 }
 
 li.L1, li.L3, li.L5, li.L7, li.L9 {}
+
+HR { border-top:1px solid #eee; }
+
+#sidebar .nav .current ul.classic { display: block; margin-left: 48px; padding-left:16px; padding-bottom: 15px; margin-bottom: 15px; }
+#sidebar .nav .current ul.classic LI { list-style: disc; }
+#sidebar .nav .current ul li ul li ul.classic LI a { padding-left:10px; }
