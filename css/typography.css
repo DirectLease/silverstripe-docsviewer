@@ -19,7 +19,7 @@ a {
 
     a:hover,
     a:focus {
-        text-decoration: underline;
+        text-decoration: none;
     }
 
 a[href$=".pdf"],
@@ -230,22 +230,25 @@ pre {
         font-size: 1em;
         line-height: 1.5em;
     }
+.docs-api pre code { display:block; background:#f5f5f5; border: 1px solid rgba(0, 0, 0, 0.15); padding: 9.5px; margin: 0 0 10px; }
 
 code {
     /* inline styles, fit with non-code text */
     font-size: 13px;
     line-height: 15px;
     font-family: Monaco, 'Bitstream Vera Sans Mono', Courier, monospace;
-    background: #f0f4f4;
-    color: #ed135a;
-    padding: 2px;
+    /*background: #f0f4f4;*/
+    color: #000;
+    padding: 1px 0;
+    margin: 0 2px 0 0;
 }
 
     /*code a {*/
     A code {
-      color: #ed135a;
-      text-decoration: underline;
+      color: #ed135a; border-bottom:1px solid #eb5284;
     }
+
+H3 code { font-size:inherit; display: block; background: rgb(3, 91, 136); color:#fff; padding:.5em .25em;}
 
 /*! quotes */
 blockquote {
@@ -321,7 +324,7 @@ table {
     }
 
 .docs-api table { /*border-bottom: 1px solid #c3cdca;*/ }
-.docs-api table thead th, .docs-api table td { border-left: 0; border-right: 0; }
+.docs-api table thead th, .docs-api table td { border-left: 0; border-right: 0; vertical-align: top; }
 .docs-api table, .docs-api table tr:nth-child(even) { background: #fff; }
 .docs-api table tr:hover { background: #eef4f6; }
 
@@ -366,3 +369,19 @@ table {
             background: linear-gradient(to bottom, #599BDC 1%,#3072B3 100%);
             filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#599BDC', endColorstr='#3072B3',GradientType=0 );
         }
+
+.badge {
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+}
+.badge-warning {
+    color: #212529;
+    background-color: #ffc107;
+}
