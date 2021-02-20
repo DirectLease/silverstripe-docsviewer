@@ -385,3 +385,8 @@ table {
     color: #212529;
     background-color: #ffc107;
 }
+.badge-danger {
+    color: #fff;
+    background-color: #dc3545;
+}
+P.deprecated { margin: 10px 0; color:#dc3545; }
