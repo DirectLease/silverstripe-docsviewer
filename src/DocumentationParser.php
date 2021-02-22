@@ -45,8 +45,6 @@ class DocumentationParser
      */
     public static function parse(DocumentationPage $page, $baselink = null)
     {
-        //echo "<pre>";print_r($page);echo "</pre>";die();
-        //if (!$page || (!$page->getIsAPI() && !$page instanceof DocumentationPage)) {
         if (!$page || (!$page instanceof DocumentationPage)) {
             return false;
         }
@@ -67,7 +65,6 @@ class DocumentationParser
         $parser->setBreaksEnabled(false);
 
         $text = $parser->text($md);
-        //echo "<pre>";print_r($text);echo "</pre>";die();
         return $text;
     }
 
