@@ -130,7 +130,7 @@ class DocumentationViewer extends Controller implements PermissionProvider
             Requirements::combine_files(
                 'docs.js',
                 array(
-                    'silverstripe/admin: thirdparty/jquery/jquery.js',
+                    //'silverstripe/admin: thirdparty/jquery/jquery.js',
                     'silverstripe/docsviewer: thirdparty/highlight/highlight.pack.js',
                     'silverstripe/docsviewer: javascript/DocumentationViewer.js',
                 )

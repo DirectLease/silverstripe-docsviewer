@@ -4,6 +4,7 @@
 	<% include SilverStripe\\DocsViewer\\Controllers\\DocumentationHead %>
 
 	<div id="masthead" <% if Versions %>class="has_versions"<% end_if %>>
+
 		<div class="wrapper">
 			<div class="menu-bar">
 				<a class="logo" href="https://userhelp.silverstripe.org/"></a>
@@ -23,7 +24,20 @@
 				</div>
 			<% end_if %>
 
+			<% if $IsAPIPage %>
+				<div id="control-panel">
+					<form id="search-form" action="search.htm">
+						<span class="icon icon-search"></span>
+						<input name="search"
+							   class="typeahead form-control"
+							   type="search"
+							   placeholder="Search" />
+					</form>
+				</div>
+			<% end_if %>
+
 			<% include SilverStripe\\DocsViewer\\Controllers\\DocumentationVersions %>
+			<div class="clearfix"></div>
 		</div>
 	</div>
 

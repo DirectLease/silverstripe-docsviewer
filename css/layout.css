@@ -181,7 +181,7 @@ html {
 }
 
 #masthead {
-    padding: 50px 0;
+    padding: 20px 0;
     background:#f6f7f8;
     position:relative;
 }
@@ -191,7 +191,7 @@ html {
     }
 
     #masthead .wrapper {
-        overflow: hidden;
+        /*overflow: hidden;*/
     }
 
 .versions {
@@ -826,3 +826,52 @@ HR { border-top:1px solid #eee; }
 #sidebar .nav .current ul.classic { display: block; margin-left: 48px; padding-left:16px; padding-bottom: 15px; margin-bottom: 15px; }
 #sidebar .nav .current ul.classic LI { list-style: disc; }
 #sidebar .nav .current ul li ul li ul.classic LI a { padding-left:10px; }
+
+/* Typeahead */
+#control-panel { float: left; margin-top: 1em; }
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.twitter-typeahead {
+    width: 100%;
+    z-index: 1;
+}
+
+.tt-dropdown-menu {
+    overflow: auto;
+    max-height: 260px;
+    margin-top: 9px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    padding: 8px;
+}
+
+.tt-dropdown-menu p {
+    margin: 0;
+    padding: 0;
+}
+
+.tt-suggestion {
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+    font-size: 1.1em;
+}
+
+.tt-cursor {
+    background-color: #3875d7;
+    color: #fff;
+}
