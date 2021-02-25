@@ -249,6 +249,7 @@ code {
     }
 
 H3 code { font-size:inherit; display: block; background: rgb(3, 91, 136); color:#fff; padding:.5em .25em;}
+H6 code { font-weight: normal; }
 
 /*! quotes */
 blockquote {
