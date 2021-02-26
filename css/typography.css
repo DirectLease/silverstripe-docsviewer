@@ -254,8 +254,9 @@ H6 code { font-weight: normal; }
 /*! quotes */
 blockquote {
     margin: 28px 0;
-    padding: 14px 14px 0 38px;
-    background: #f8f9fa url(../../docsviewer/images/quote.gif) no-repeat 9px 18px;
+    padding: 25px 14px 0 30px;
+    /*background: #f8f9fa url(../../docsviewer/images/quote.gif) no-repeat 9px 18px;*/
+    background: #f8f9fa;
     overflow: hidden;
 }
 

@@ -132,7 +132,7 @@ class DocumentationViewer extends Controller implements PermissionProvider
                 array(
                     //'silverstripe/admin: thirdparty/jquery/jquery.js',
                     'silverstripe/docsviewer: thirdparty/highlight/highlight.pack.js',
-                    'silverstripe/docsviewer: javascript/DocumentationViewer.js',
+                    'silverstripe/docsviewer: javascript/DocumentationViewer.js'
                 )
             );
             Requirements::combine_files(
@@ -562,6 +562,9 @@ class DocumentationViewer extends Controller implements PermissionProvider
      */
     public function getIsAPIPage()
     {
+        if (!$this->getPage()) {
+            return false;
+        }
         return $this->getPage()->getIsAPI();
     }
 
