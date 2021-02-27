@@ -483,7 +483,7 @@ class DocumentationViewer extends Controller implements PermissionProvider
     /**
      * Short code parser
      */
-    public function includeChildren($args)
+    public function includeChildren($args, $content = null, $parser = null, $tagName)
     {
         if (isset($args[Folder::class])) {
             $children = $this->getManifest()->getChildrenFor(
